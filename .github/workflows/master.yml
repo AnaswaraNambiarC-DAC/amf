@@ -95,7 +95,7 @@ jobs:
       - name: Log in to Docker Hub
         run: echo "${{ secrets.PASSWORD }}" | docker login -u "${{ secrets.USERNAME }}" --password-stdin
       - name: Tag Docker image
-        run: docker tag 5gc-smf:0.0.1-dev ios5g/amf:0.0.0-test
+        run: docker tag 5gc-amf:0.0.1-dev ios5g/amf:0.0.0-test
 
       - name: Push Docker image to Docker Hub
         run: docker push ios5g/amf:0.0.0-test
